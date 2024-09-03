@@ -32,12 +32,11 @@ comparador x y = if x == y
             else 1
 
 {-Ejercicio 7-}
-aux_maximo :: Int -> [Int] -> Int
-aux_maximo p [] = p
-aux_maximo p (x:xs) = if p <= x then aux_maximo x xs else aux_maximo p xs
-
 maximo :: Int -> Int -> Int -> Int
-maximo x y z = aux_maximo x ([y,z])
+maximo x y z =
+if x >= y && x >= z then x
+if y >= z then y
+else z
 
 {-Ejercicio 8-}
 esDescendente :: Int -> Int -> Int -> Int -> Bool
