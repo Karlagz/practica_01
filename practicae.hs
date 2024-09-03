@@ -33,10 +33,10 @@ comparador x y = if x == y
 
 {-Ejercicio 7-}
 maximo :: Int -> Int -> Int -> Int
-maximo x y z =
-if x >= y && x >= z then x
-if y >= z then y
-else z
+maximo x y z = 
+    if x >= y && x >= z then x
+    else if y >= z && y >= x then y
+    else z
 
 {-Ejercicio 8-}
 esDescendente :: Int -> Int -> Int -> Int -> Bool
