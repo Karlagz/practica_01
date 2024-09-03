@@ -1,6 +1,6 @@
 
 {-Ejercicio 1-}
-distanciaPuntos :: (Double,Double) -> (Double,Double) -> Double
+distanciaPuntos :: (Float,Float) -> (Float,Float) -> Float
 distanciaPuntos (x1,y1) (x2,y2) = sqrt ((x2-x1)^2 + (y2-y1)^2)
 
 {-Ejercicio 2-}
@@ -8,18 +8,18 @@ hipotenusa :: (Float,Float) -> Float
 hipotenusa (x,y) = sqrt ((x^2) + (y^2))
 
 {-Ejercicio 3-}
-pendiente :: (Double,Double) -> (Double,Double) -> Double
+pendiente :: (Float,Float) -> (Float,Float) -> Float
 pendiente (x1,y1) (x2,y2) =  (y2-y1) / (x2-x1)
 
 {-Ejercicio 4-}
 raices :: Float -> Float -> Float -> (Float,Float)
-raices a b c = ((-b + sqrt((b^2 - 4 * a * c) * (-1))) / (2 * a), (-b - sqrt ((b^2 - 4 * a * c) * (-1))) / (2 * a))
+raices a b c = ((-b + sqrt((b^2 - 4 * a * c))) / (2 * a), (-b - sqrt ((b^2 - 4 * a * c))) / (2 * a))
 
 {-Ejercicio 5-}
-aux_perimetro :: Double -> Double -> Double -> Double
+aux_perimetro :: Float -> Float -> Float -> Float
 aux_perimetro a b c =  (a+b+c) / 2
 
-areaTriangulo :: Double -> Double -> Double -> Double
+areaTriangulo :: Float -> Float -> Float -> Float
 areaTriangulo a b c = sqrt ((aux_perimetro a b c)* ((aux_perimetro a b c) - a)*((aux_perimetro a b c) - b)*((aux_perimetro a b c) - c ))
 
 {-Ejercicio 6-}
